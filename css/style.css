@@ -1,0 +1,138 @@
+:root {
+    --nav-height: 66px;
+    --nav-color: #0e0e0e;
+    --nav-color-dark: #050505;
+    --nav-color-light: #1b1b1b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background: #fcfcfc;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--nav-color);
+    height: var(--nav-height);
+}
+
+header * {
+    color: #f3f3f3;
+}
+
+header .logo {
+    float: left;
+    height: inherit;
+    margin-left: 2em;
+    display: flex;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-family: 'Kanit', serif;
+}
+
+header ul {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+header ul li {
+    float: left;
+    position: relative;
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+header ul li ul {
+    z-index: 88888;
+    display: none;
+    position: absolute;
+    background-color: var(--nav-color-light);
+    top: var(--nav-height);
+    right: 0px;
+    width: 188px ;
+}
+
+header ul li ul li {
+    align-items: center;
+    width: 100%;
+}
+
+header ul li ul li a {
+    text-align: center;
+    padding: 5px;
+}
+
+header ul li ul li a.logout {
+    color: #be6868;
+}
+
+header ul li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    background-color: var(--nav-color-dark);
+    transition: 0.5s;
+}
+
+header .menu-toggle {
+    display: none;
+}
+
+/* Responsive */
+@media only screen and (max-width: 850px) {
+    header ul {
+        max-height: 0px;
+        width: 100%;
+        background-color: var(--nav-color);
+        overflow: hidden;
+    }
+
+    .showing-nav {
+        max-height: 100em;
+    }
+
+    header ul li {
+        width: 100%;
+    }
+
+    header ul li ul {
+        position: static;
+        display: block;
+        width: 100%;
+    }
+
+    header ul li ul li a {
+        padding-left: 40px;
+        text-align: left;
+    }
+
+    header {
+        position: relative;
+    }
+
+    header .menu-toggle {
+        padding-right: 20px;
+        height: inherit;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        font-size: 2em;
+        cursor: pointer;
+    }
+}
