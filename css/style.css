@@ -14,13 +14,20 @@ body {
     margin: 0px;
     background: #fcfcfc;
     font-family: 'Poppins', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 header {
     position: fixed;
+    top: 0px;
     width: 100%;
     background-color: var(--nav-color);
     height: var(--nav-height);
+    z-index: 5000;
+    box-shadow: 0px 0px 10px 0px #000000;
 }
 
 header * {
@@ -94,8 +101,322 @@ header .menu-toggle {
     display: none;
 }
 
+main {
+    margin: 0px;
+    padding: 0px;
+
+    margin-top: var(--nav-height);
+    padding-bottom: 10vh;
+
+    font-size: 22px;
+}
+
+h1,
+h2,
+h3,
+h3,
+h5,
+h6 {
+    font-family: "Kanit", serif;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    background: var(--nav-color);
+    color: #f3f3f3;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.banner img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.banner h1 {
+    margin: 0px;
+    padding: 0px;
+
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    
+    width: 75%;
+    height: auto;
+
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    color: #fff;
+
+    font-family: "Kanit", serif;
+    font-size: 10vw;
+
+    justify-content: center;
+}
+
+.banner {
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    margin-bottom: 15vh;
+    box-shadow: 0px 0px 10px 0px #000000;
+    overflow: hidden;
+    position:relative
+}
+
+.quote {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    
+    padding: 5vh 10vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f3f3f3;
+    box-shadow: 0px 0px 10px -5px #000000;
+}
+
+.quote p {
+    margin: 0px;
+    padding: 0px;
+
+    width: 50%;
+    height: auto;
+
+    text-align: center;
+
+    font-style: italic;
+}
+
+.quote > :first-child {
+    font-size: 2em;
+    font-family: "Caveat", serif;
+}
+
+.quote > :first-child::after {
+    content: '"';
+    margin-left: 0.25em;
+}
+
+.quote > :first-child::before {
+    content: '"';
+    margin-right: 0.25em;
+}
+
+.quote > :last-child {
+    margin-top: 2em;
+    font-size: 0.75em;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.post-list {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 5vh 5vw;
+
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.post-card {
+    flex-basis: 20%;
+    -ms-flex: auto;
+    box-sizing: border-box;
+    position: relative;
+
+    width: 512px;
+    aspect-ratio: 1/1;
+    margin: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50px;
+
+    background-color: #f3f3f3;
+    box-shadow: 0px 0px 10px -5px #000000;
+    overflow: hidden
+}
+
+.post-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.post-card > .footer {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #f3f3f3;
+}
+
+.post-card > .footer > .content {
+    width: 100%;
+    padding: 0 1.5em;
+    margin: 0px;
+    text-align: center;
+    font-size: 0.6em;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding-bottom: 1em;
+    transition: opacity 0.75s ease, max-height 0.5s ease-in-out; /* Add transition */
+}
+
+.post-card > .footer > .title {
+    width: 100%;
+    padding: 0 2.5em;
+    margin: 0px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.post-card:hover {
+    cursor: pointer;
+}
+
+.post-card:hover > img {
+    transition: 0.5s;
+    filter: blur(1px);
+}
+
+.post-card:hover > .footer > .content {
+    opacity: 1;
+    max-height: 100px;
+}
+
+.content-card {
+    width: 75%;
+    height: auto;
+    margin: 0px;
+    padding: 5vh 5vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50px;
+
+    background-color: #f3f3f3;
+    box-shadow: 0px 0px 10px -5px #000000;
+}
+
+.content-card h2 {
+    font-family: "Kanit", serif;
+    font-size: 2em;
+    font-style: italic;
+}
+
+.content-card p {
+    text-align: justify;
+}
+
+.separation-h {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(0,0,0,0), rgb(211, 211, 211), rgba(0,0,0,0));
+    margin: 5vh 0;
+}
+
+.separation-v {
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgb(211, 211, 211), rgba(0,0,0,0));
+    margin: 5vh 0;
+}
+
+.title {
+    width: 50%;
+    height: auto;
+    margin: 0;
+    text-align: center;
+    font-family: "Kanit", serif;
+}
+
+.no-box {
+    background: none;
+    box-shadow: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.upper-margin {
+    margin-top: 5vh;
+}
+
+.upper-margin-2 {
+    margin-top: 10vh;
+}
+
+.upper-margin-3 {
+    margin-top: 20vh;
+}
+
+
 /* Responsive */
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1555px) {
+    .post-card > .footer > .content {
+        font-size: 0.5em;
+    }
+    
+    .post-card > .footer > .title {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 1255px) {
+    .post-card {
+        flex-basis: 30%;
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .post-card {
+        flex-basis: 40%;
+    }
+}
+
+@media only screen and (max-width: 855px) {
     header ul {
         max-height: 0px;
         width: 100%;
@@ -123,7 +444,8 @@ header .menu-toggle {
     }
 
     header {
-        position: relative;
+        position: fixed;
+        top: 0px;
     }
 
     header .menu-toggle {
@@ -134,5 +456,32 @@ header .menu-toggle {
         align-items: center;
         font-size: 2em;
         cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 655px) {
+    .post-card {
+        flex-basis: 80%;
+        margin: 1rem 0;
+    }
+
+    .post-card > .footer > .content {
+        font-size: 0.4em;
+    }
+    
+    .post-card > .footer > .title {
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    main {
+        margin: 0px;
+        padding: 0px;
+    
+        padding-bottom: 10vh;
+    
+        font-size: 16px;
     }
 }
