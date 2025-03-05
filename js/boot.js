@@ -1,7 +1,7 @@
-$.get("nav.html", function(data){
+$.get("/nav.html", function(data){
     $("header").replaceWith(data);
 });
 
-$.get("footer.html", function(data){
+$.get("/footer.html", function(data){
     $("footer").replaceWith(data);
 });
