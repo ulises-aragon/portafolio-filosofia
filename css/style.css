@@ -382,6 +382,11 @@ footer {
     text-align: center;
 }
 
+.post-content p {
+    font-weight: normal;
+    text-align: justify;
+}
+
 .post-content .back {
     display: inline-block;
     text-decoration: none;
