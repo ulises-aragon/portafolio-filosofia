@@ -46,6 +46,13 @@ header .logo {
     margin-left: 2em;
     display: flex;
     align-items: center;
+    cursor: pointer;
+}
+
+header .logo .logo-img {
+    margin-right: 0.5em;
+    height: 4em;
+    aspect-ratio: 1/1;
 }
 
 header .logo h1 {
