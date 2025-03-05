@@ -684,4 +684,13 @@ footer {
     
         font-size: 0.9rem;
     }
+
+    header .logo h1 {
+        font-size: 1.5em;
+    }
+
+    header .logo .logo-img {
+        height: 3.25em;
+        aspect-ratio: 1/1;
+    }
 }
